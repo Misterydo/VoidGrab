@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "voidgrab"
+version = "0.1.0"
+description = "Modular media/social data detector, extractor, and downloader CLI."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "VoidGrab Contributors" }]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+ytdlp = ["yt-dlp>=2026.1.1"]
+
+[project.scripts]
+voidgrab = "voidgrab.main:main"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
